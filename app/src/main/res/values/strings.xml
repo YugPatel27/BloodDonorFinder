@@ -1,0 +1,90 @@
+<resources>
+    <string name="app_name">Blood Donor</string>
+    <string name="tagline">One Drop, Many Lives</string>
+
+    <!-- Auth Screens -->
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="full_name">Full Name</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="blood_group">Blood Group</string>
+    <string name="user_type">I am a</string>
+    <string name="donor">Donor</string>
+    <string name="requester">Requester</string>
+    <string name="last_donation_date">Last Donation Date</string>
+    <string name="availability">Availability</string>
+    <string name="available">Available</string>
+    <string name="not_available">Not Available</string>
+    <string name="otp_verification">OTP Verification</string>
+    <string name="enter_otp">Enter 6-digit OTP sent to your phone</string>
+    <string name="verify">Verify OTP</string>
+    <string name="resend_otp">Resend OTP</string>
+    <string name="dont_have_account">Don\'t have an account? Register</string>
+    <string name="already_have_account">Already have an account? Login</string>
+
+    <!-- Dashboard Tabs -->
+    <string name="home">Home</string>
+    <string name="search">Search</string>
+    <string name="request">Request</string>
+    <string name="profile">Profile</string>
+
+    <!-- Home Fragment -->
+    <string name="welcome_back">Welcome Back</string>
+    <string name="total_donors">Total Donors</string>
+    <string name="your_donations">Your Donations</string>
+    <string name="active_requests">Active Requests</string>
+    <string name="find_donor">Find Donor</string>
+    <string name="post_request">Post Request</string>
+    <string name="my_card">My Card</string>
+    <string name="hospitals">Hospitals</string>
+    <string name="nearby_requests">Nearby Requests</string>
+
+    <!-- Search -->
+    <string name="search_donors">Search Donors</string>
+    <string name="filter_by_blood_group">Filter by Blood Group</string>
+    <string name="distance_km">Distance (km)</string>
+    <string name="available_only">Available Only</string>
+    <string name="no_donors_found">No donors found for this filter</string>
+    <string name="km_away">km away</string>
+
+    <!-- Request -->
+    <string name="blood_requests">Blood Requests</string>
+    <string name="hospital_name">Hospital Name</string>
+    <string name="required_date_time">Required Date/Time</string>
+    <string name="contact_details">Contact Details</string>
+    <string name="priority">Priority</string>
+    <string name="normal">Normal</string>
+    <string name="urgent">Urgent</string>
+    <string name="critical">Critical</string>
+    <string name="submit_request">Submit Request</string>
+    <string name="no_requests">No blood requests found</string>
+
+    <!-- Profile -->
+    <string name="edit_profile">Edit Profile</string>
+    <string name="donation_history">Donation History</string>
+    <string name="donor_card">My Donor Card</string>
+    <string name="rewards">Rewards &amp; Badges</string>
+    <string name="logout">Logout</string>
+
+    <!-- Donor Card -->
+    <string name="donor_id">Donor ID</string>
+    <string name="total_donations">Total Donations</string>
+    <string name="next_eligible">Next Eligible Date</string>
+    <string name="digital_donor_card">Digital Donor Card</string>
+
+    <!-- History -->
+    <string name="no_history">No donation history yet</string>
+    <string name="next_donation_eligible">You can donate again after</string>
+
+    <!-- Hospitals -->
+    <string name="hospital_list">Hospitals &amp; Blood Banks</string>
+    <string name="blood_stock">Blood Stock</string>
+    <string name="call">Call</string>
+
+    <!-- Rewards -->
+    <string name="your_points">Your Points</string>
+    <string name="badges_earned">Badges Earned</string>
+    <string name="leaderboard">Leaderboard</string>
+</resources>

@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  activity_donor_card.xml – Digital Donor Card screen.
+  Shows the user's blood group, donor ID, donation count, next eligible date.
+  Looks like an actual card/ID card.
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/grey_light"
+    android:gravity="center_horizontal">
+
+    <!-- The card itself – styled like an ID card -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:layout_marginTop="40dp"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="10dp"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Card header – red gradient -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_red_gradient"
+                android:orientation="horizontal"
+                android:padding="20dp"
+                android:gravity="center_vertical"
+                android:layout_marginTop="10dp">
+
+                <!-- Blood drop icon -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🩸"
+                    android:textSize="36sp"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_marginStart="12dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Blood Donor Card"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:textStyle="bold"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Official Donor ID"
+                        android:textColor="#FFCDD2"
+                        android:textSize="12sp"/>
+                </LinearLayout>
+
+                <!-- Large blood group display -->
+                <TextView
+                    android:id="@+id/tvCardBloodGroup"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:text="A+"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/red_primary"
+                    android:gravity="center"
+                    android:background="@color/white"/>
+            </LinearLayout>
+
+            <!-- Card body – white section with user details -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp"
+                android:background="@color/white">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="14dp">
+                    <!-- Avatar circle -->
+                    <TextView
+                        android:id="@+id/tvCardAvatar"
+                        android:layout_width="56dp"
+                        android:layout_height="56dp"
+                        android:text="K"
+                        android:textSize="26sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:gravity="center"
+                        android:background="@color/red_primary"/>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_marginStart="14dp">
+                        <TextView
+                            android:id="@+id/tvCardName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Keval Sheth"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/text_primary"/>
+                        <TextView
+                            android:id="@+id/tvCardDonorId"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="ID: BD00123"
+                            android:textSize="13sp"
+                            android:textColor="@color/text_secondary"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Divider -->
+                <View android:layout_width="match_parent" android:layout_height="1dp"
+                    android:background="@color/grey_light" android:layout_marginBottom="14dp"/>
+
+                <!-- Total Donations row -->
+                <LinearLayout android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:layout_marginBottom="8dp">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:text="Total Donations"
+                        android:textColor="@color/text_secondary" android:textSize="14sp"/>
+                    <TextView android:id="@+id/tvCardDonations"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="0" android:textColor="@color/red_primary"
+                        android:textSize="14sp" android:textStyle="bold"/>
+                </LinearLayout>
+
+                <!-- Next Eligible Date row -->
+                <LinearLayout android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:layout_marginBottom="8dp">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:text="Next Eligible Date"
+                        android:textColor="@color/text_secondary" android:textSize="14sp"/>
+                    <TextView android:id="@+id/tvCardNextDate"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Available Now" android:textColor="@color/green_available"
+                        android:textSize="14sp" android:textStyle="bold"/>
+                </LinearLayout>
+
+                <!-- Tagline at the bottom of card -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="One Drop, Many Lives"
+                    android:textSize="14sp"
+                    android:textStyle="italic"
+                    android:textColor="@color/red_light"
+                    android:gravity="center"
+                    android:layout_marginTop="10dp"/>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Share hint button -->
+    <Button
+        android:id="@+id/btnShareCard"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:text="📤 Share My Donor Card"
+        android:textColor="@color/white"
+        android:background="@drawable/bg_button_red"/>
+
+</LinearLayout>

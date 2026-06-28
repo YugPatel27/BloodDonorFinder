@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Rounded red button background -->
+<!-- Used on all primary action buttons like Login, Register, Submit -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <!-- Fill color = primary red -->
+    <solid android:color="@color/red_primary" />
+    <!-- Rounded corners so it looks modern -->
+    <corners android:radius="12dp" />
+</shape>

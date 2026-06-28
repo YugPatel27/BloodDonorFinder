@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  item_request_card.xml – A single blood request card in the requests list.
+  Shows: Blood group, hospital, urgency badge, date/time, requester, call button.
+-->
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="6dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="14dp">
+
+        <!-- Top row: Blood group (large) + Priority badge -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="8dp">
+
+            <!-- Large blood group display -->
+            <TextView
+                android:id="@+id/tvRequestBloodGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="O+"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="@color/red_dark"
+                android:background="@drawable/bg_blood_group_badge"
+                android:paddingLeft="12dp" android:paddingRight="12dp"
+                android:paddingTop="4dp" android:paddingBottom="4dp"
+                android:layout_marginEnd="12dp" />
+
+            <!-- Priority badge – color changes based on urgency -->
+            <TextView
+                android:id="@+id/tvPriority"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="⚠ Urgent"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:textColor="@color/orange_urgent"
+                android:background="@drawable/bg_priority_urgent"
+                android:paddingLeft="10dp" android:paddingRight="10dp"
+                android:paddingTop="3dp" android:paddingBottom="3dp" />
+
+            <!-- Push call button to right -->
+            <View android:layout_width="0dp" android:layout_height="1dp" android:layout_weight="1"/>
+
+            <Button
+                android:id="@+id/btnCallRequester"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:text="📞 Call"
+                android:textSize="12sp"
+                android:textColor="@color/white"
+                android:background="@drawable/bg_button_red"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp" />
+        </LinearLayout>
+
+        <!-- Hospital name -->
+        <TextView
+            android:id="@+id/tvHospitalName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🏥 Civil Hospital, Ahmedabad"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_primary"
+            android:layout_marginBottom="4dp" />
+
+        <!-- Required date/time -->
+        <TextView
+            android:id="@+id/tvRequiredDateTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🕐 06 Apr 2024, 10:00 AM"
+            android:textSize="13sp"
+            android:textColor="@color/text_secondary"
+            android:layout_marginBottom="4dp" />
+
+        <!-- Requester name -->
+        <TextView
+            android:id="@+id/tvRequesterName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="👤 Posted by: Suresh Patel"
+            android:textSize="12sp"
+            android:textColor="@color/text_secondary" />
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

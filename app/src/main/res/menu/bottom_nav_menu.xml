@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Bottom Navigation Menu – 4 tabs: Home, Search, Request, Profile -->
+<!-- Each item has an icon and a label shown at the bottom of the screen -->
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Tab 1: Home – shows stats and quick access buttons -->
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@android:drawable/ic_menu_compass"
+        android:title="@string/home" />
+
+    <!-- Tab 2: Search – find donors by blood group and distance -->
+    <item
+        android:id="@+id/nav_search"
+        android:icon="@android:drawable/ic_menu_search"
+        android:title="@string/search" />
+
+    <!-- Tab 3: Request – post or view blood requests -->
+    <item
+        android:id="@+id/nav_request"
+        android:icon="@android:drawable/ic_menu_send"
+        android:title="@string/request" />
+
+    <!-- Tab 4: Profile – user profile, history, settings -->
+    <item
+        android:id="@+id/nav_profile"
+        android:icon="@android:drawable/ic_menu_myplaces"
+        android:title="@string/profile" />
+
+</menu>

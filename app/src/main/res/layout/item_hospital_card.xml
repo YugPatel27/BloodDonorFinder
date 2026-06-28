@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- item_hospital_card.xml – a Hospital or Blood Bank entry in the list -->
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="6dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="14dp"
+        android:gravity="center_vertical">
+
+        <!-- Hospital icon (emoji) -->
+        <TextView
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:text="🏥"
+            android:textSize="28sp"
+            android:gravity="center"
+            android:background="@drawable/bg_circle_red" />
+
+        <!-- Hospital info -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginStart="12dp">
+
+            <TextView
+                android:id="@+id/tvHospitalName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Civil Hospital Ahmedabad"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_primary" />
+
+            <TextView
+                android:id="@+id/tvHospitalAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="📍 Asarwa, Ahmedabad"
+                android:textSize="12sp"
+                android:textColor="@color/text_secondary"
+                android:layout_marginTop="2dp"/>
+
+            <TextView
+                android:id="@+id/tvBloodStock"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="🩸 A+, O+, B+ available"
+                android:textSize="12sp"
+                android:textColor="@color/green_available"
+                android:layout_marginTop="4dp"/>
+        </LinearLayout>
+
+        <!-- Call button -->
+        <Button
+            android:id="@+id/btnCallHospital"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:text="Call"
+            android:textSize="12sp"
+            android:textColor="@color/white"
+            android:background="@drawable/bg_button_red"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

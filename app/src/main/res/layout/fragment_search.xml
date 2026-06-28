@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  fragment_search.xml – Donor search screen
+  Filter by blood group + distance, show results in RecyclerView
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/grey_light">
+
+    <!-- ─── Header ─────────────────────────────────────────────────────── -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/red_primary"
+        android:padding="16dp"
+        android:layout_marginTop="5dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Find Blood Donors"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Search nearby donors by blood group"
+            android:textColor="#FFCDD2"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+    <!-- ─── Filter Card ────────────────────────────────────────────────── -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="4dp"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Blood Group filter -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Blood Group"
+                android:textColor="@color/text_primary"
+                android:textStyle="bold"
+                android:layout_marginBottom="6dp"/>
+
+            <Spinner
+                android:id="@+id/spinnerBloodFilter"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/bg_input_field"
+                android:padding="10dp"
+                android:layout_marginBottom="12dp" />
+
+            <!-- Distance filter row -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Distance"
+                    android:textColor="@color/text_primary"
+                    android:textStyle="bold"/>
+
+                <Spinner
+                    android:id="@+id/spinnerDistance"
+                    android:layout_width="140dp"
+                    android:layout_height="48dp"
+                    android:background="@drawable/bg_input_field"
+                    android:padding="10dp"/>
+            </LinearLayout>
+
+            <!-- Available Only checkbox -->
+            <CheckBox
+                android:id="@+id/cbAvailableOnly"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Show Available Donors Only"
+                android:textColor="@color/text_primary"
+                android:buttonTint="@color/red_primary"
+                android:layout_marginTop="10dp"/>
+
+            <!-- Search Button -->
+            <Button
+                android:id="@+id/btnSearch"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="Search Donors"
+                android:textColor="@color/white"
+                android:background="@drawable/bg_button_red"
+                android:layout_marginTop="12dp"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- ─── Results count ─────────────────────────────────────────────── -->
+    <TextView
+        android:id="@+id/tvResultCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="10 donors found"
+        android:textColor="@color/text_secondary"
+        android:textSize="13sp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="4dp"/>
+
+    <!-- ─── Donors RecyclerView ────────────────────────────────────────── -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvDonors"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="8dp"
+        android:clipToPadding="false" />
+
+</LinearLayout>

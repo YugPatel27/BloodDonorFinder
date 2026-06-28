@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Input field background: white with red border and rounded corners -->
+<!-- Used on all EditText fields like email, password, name, etc. -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <solid android:color="@color/white" />
+    <!-- Red border (stroke) around the input box -->
+    <stroke
+        android:width="1.5dp"
+        android:color="@color/red_light" />
+    <corners android:radius="10dp" />
+</shape>

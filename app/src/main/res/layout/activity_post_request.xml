@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  activity_post_request.xml – Form to post a new emergency blood request
+-->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_red_gradient"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:layout_marginBottom="20dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🚨 Emergency Blood Request"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fill in the details to notify nearby donors"
+                android:textColor="#FFCDD2"
+                android:textSize="13sp"/>
+        </LinearLayout>
+
+        <!-- Blood Group -->
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Blood Group Required" android:textStyle="bold"
+            android:textColor="@color/text_primary" android:layout_marginBottom="6dp"/>
+        <Spinner
+            android:id="@+id/spinnerBloodGroup"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:background="@drawable/bg_input_field"
+            android:padding="10dp"
+            android:layout_marginBottom="14dp"/>
+
+        <!-- Hospital Name -->
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Hospital Name" android:textStyle="bold"
+            android:textColor="@color/text_primary" android:layout_marginBottom="6dp"/>
+        <EditText
+            android:id="@+id/etHospitalName"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:hint="e.g. Civil Hospital, Ahmedabad"
+            android:inputType="textCapWords"
+            android:background="@drawable/bg_input_field"
+            android:padding="14dp"
+            android:layout_marginBottom="14dp"/>
+
+        <!-- Required Date/Time -->
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Required Date &amp; Time" android:textStyle="bold"
+            android:textColor="@color/text_primary" android:layout_marginBottom="6dp"/>
+        <TextView
+            android:id="@+id/tvRequiredDate"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:hint="Tap to pick date &amp; time"
+            android:gravity="center_vertical"
+            android:background="@drawable/bg_input_field"
+            android:padding="14dp"
+            android:textColor="@color/text_primary"
+            android:textColorHint="@color/text_hint"
+            android:layout_marginBottom="14dp"/>
+
+        <!-- Contact Number -->
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Contact Number" android:textStyle="bold"
+            android:textColor="@color/text_primary" android:layout_marginBottom="6dp"/>
+        <EditText
+            android:id="@+id/etContact"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:hint="Your phone number"
+            android:inputType="phone"
+            android:background="@drawable/bg_input_field"
+            android:padding="14dp"
+            android:layout_marginBottom="14dp"/>
+
+        <!-- Priority -->
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Priority Level" android:textStyle="bold"
+            android:textColor="@color/text_primary" android:layout_marginBottom="6dp"/>
+        <RadioGroup
+            android:id="@+id/rgPriority"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="24dp">
+            <RadioButton android:id="@+id/rbNormal"
+                android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:text="✅ Normal"
+                android:buttonTint="@color/red_primary" android:checked="true"/>
+            <RadioButton android:id="@+id/rbUrgent"
+                android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:text="⚠ Urgent"
+                android:buttonTint="@color/red_primary"/>
+            <RadioButton android:id="@+id/rbCritical"
+                android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:text="🚨 Critical"
+                android:buttonTint="@color/red_primary"/>
+        </RadioGroup>
+
+        <!-- Submit Button -->
+        <Button
+            android:id="@+id/btnSubmitRequest"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:text="Submit Request"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:background="@drawable/bg_button_red"/>
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  activity_otp.xml – OTP Verification screen
+  User enters the 6-digit OTP sent to their phone number
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@color/white"
+    android:padding="32dp">
+
+    <!-- OTP icon (phone emoji) -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="📱"
+        android:textSize="72sp"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Screen title -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="OTP Verification"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:textColor="@color/red_primary"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Instruction text -->
+    <TextView
+        android:id="@+id/tvOtpMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="OTP sent to your phone number"
+        android:textSize="14sp"
+        android:textColor="@color/text_secondary"
+        android:gravity="center"
+        android:layout_marginBottom="32dp" />
+
+    <!-- ─── 6-digit OTP input ──────────────────────────────────── -->
+    <!-- inputType="number" shows numeric keypad -->
+    <!-- maxLength="6" prevents entering more than 6 digits -->
+    <EditText
+        android:id="@+id/etOtp"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:hint="Enter 6-digit OTP"
+        android:inputType="numberPassword"
+        android:maxLength="6"
+        android:background="@drawable/bg_input_field"
+        android:padding="14dp"
+        android:textSize="22sp"
+        android:textColor="@color/text_primary"
+        android:textColorHint="@color/text_hint"
+        android:gravity="center"
+        android:letterSpacing="0.3"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Demo hint for college presentation -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Demo OTP: 123456"
+        android:textSize="12sp"
+        android:textColor="@color/green_available"
+        android:layout_marginBottom="24dp" />
+
+    <!-- ─── Verify Button ─────────────────────────────────────── -->
+    <Button
+        android:id="@+id/btnVerify"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:text="Verify OTP"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:background="@drawable/bg_button_red"
+        android:layout_marginBottom="16dp" />
+
+    <!-- ─── Resend / Timer ────────────────────────────────────── -->
+    <!-- Shows countdown "Resend in 0:30" then changes to "Resend OTP" link -->
+    <TextView
+        android:id="@+id/tvResend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Resend OTP in 0:30"
+        android:textSize="14sp"
+        android:textColor="@color/text_secondary"
+        android:padding="8dp" />
+
+</LinearLayout>

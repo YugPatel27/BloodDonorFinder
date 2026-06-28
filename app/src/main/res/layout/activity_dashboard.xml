@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  activity_dashboard.xml – Main screen after login, hosts 4 fragment tabs.
+
+  Structure:
+    FrameLayout (container where fragments are loaded/swapped)
+    BottomNavigationView (the tab bar at the bottom with 4 icons)
+
+  The FrameLayout is where we "swap" fragments when the user taps different tabs.
+  The BottomNavigationView stays fixed at the bottom always.
+-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <!-- Fragment container – fragments are loaded into this space -->
+    <!-- It fills all space ABOVE the bottom navigation bar -->
+    <FrameLayout
+        android:id="@+id/fragmentContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottomNavigation" />
+
+    <!-- Bottom Navigation – always visible at the bottom -->
+    <!-- app:menu links to our res/menu/bottom_nav_menu.xml file -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        app:itemIconTint="@color/nav_selected"
+        app:itemTextColor="@color/nav_selected"
+        app:menu="@menu/bottom_nav_menu"
+        app:labelVisibilityMode="labeled" />
+
+</RelativeLayout>

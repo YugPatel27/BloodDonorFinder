@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- item_history_card.xml – one donation history entry in the timeline list -->
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="6dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="3dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="14dp"
+        android:gravity="center_vertical">
+
+        <!-- Left side: Blood drop icon circle with blood group -->
+        <LinearLayout
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:background="@drawable/bg_button_red"
+            android:orientation="vertical"
+            android:gravity="center">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🩸"
+                android:textSize="20sp"/>
+            <TextView
+                android:id="@+id/tvHistoryBloodGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="A+"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"/>
+        </LinearLayout>
+
+        <!-- Info column -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginStart="14dp">
+
+            <TextView
+                android:id="@+id/tvHistoryHospital"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Civil Hospital, Ahmedabad"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_primary"/>
+
+            <TextView
+                android:id="@+id/tvHistoryDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="10 Jan 2024"
+                android:textSize="13sp"
+                android:textColor="@color/text_secondary"
+                android:layout_marginTop="3dp"/>
+
+            <TextView
+                android:id="@+id/tvHistoryUnits"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="1 Unit Donated (450ml)"
+                android:textSize="12sp"
+                android:textColor="@color/green_available"
+                android:layout_marginTop="2dp"/>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

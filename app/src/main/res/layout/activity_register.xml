@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  activity_register.xml – Registration screen
+  Allows new users to create an account with all their profile details
+-->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <!-- ─── Header ─────────────────────────────────────────── -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Create Account"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:textColor="@color/red_primary"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="4dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Join the community of blood heroes"
+            android:textSize="14sp"
+            android:textColor="@color/text_secondary"
+            android:layout_marginBottom="24dp" />
+
+        <!-- ─── Full Name ──────────────────────────────────────── -->
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Full Name" android:textColor="@color/text_primary"
+            android:textStyle="bold" android:layout_marginBottom="6dp"/>
+        <EditText
+            android:id="@+id/etName"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:hint="Enter your full name"
+            android:inputType="textPersonName"
+            android:background="@drawable/bg_input_field"
+            android:padding="14dp"
+            android:layout_marginBottom="14dp" />
+
+        <!-- ─── Phone Number ───────────────────────────────────── -->
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Phone Number" android:textColor="@color/text_primary"
+            android:textStyle="bold" android:layout_marginBottom="6dp"/>
+        <EditText
+            android:id="@+id/etPhone"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:hint="10-digit mobile number"
+            android:inputType="phone"
+            android:background="@drawable/bg_input_field"
+            android:padding="14dp"
+            android:layout_marginBottom="14dp" />
+
+        <!-- ─── Email ──────────────────────────────────────────── -->
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Email Address" android:textColor="@color/text_primary"
+            android:textStyle="bold" android:layout_marginBottom="6dp"/>
+        <EditText
+            android:id="@+id/etEmail"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:hint="your.email@gmail.com"
+            android:inputType="textEmailAddress"
+            android:background="@drawable/bg_input_field"
+            android:padding="14dp"
+            android:layout_marginBottom="14dp" />
+
+        <!-- ─── Password ───────────────────────────────────────── -->
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Password" android:textColor="@color/text_primary"
+            android:textStyle="bold" android:layout_marginBottom="6dp"/>
+        <EditText
+            android:id="@+id/etPassword"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:hint="Create a password"
+            android:inputType="textPassword"
+            android:background="@drawable/bg_input_field"
+            android:padding="14dp"
+            android:layout_marginBottom="14dp" />
+
+        <!-- ─── Blood Group Spinner ─────────────────────────────── -->
+        <!-- Spinner is Android's dropdown selector -->
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Blood Group" android:textColor="@color/text_primary"
+            android:textStyle="bold" android:layout_marginBottom="6dp"/>
+        <Spinner
+            android:id="@+id/spinnerBloodGroup"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:background="@drawable/bg_input_field"
+            android:padding="14dp"
+            android:layout_marginBottom="14dp" />
+
+        <!-- ─── User Type (I am a...) ───────────────────────────── -->
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="I am a" android:textColor="@color/text_primary"
+            android:textStyle="bold" android:layout_marginBottom="6dp"/>
+
+        <!-- RadioGroup forces only one selection at a time -->
+        <RadioGroup
+            android:id="@+id/rgUserType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="14dp">
+
+            <RadioButton
+                android:id="@+id/rbDonor"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="🩸 Donor"
+                android:checked="true"
+                android:textColor="@color/red_primary"
+                android:buttonTint="@color/red_primary" />
+
+            <RadioButton
+                android:id="@+id/rbRequester"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="🏥 Requester"
+                android:textColor="@color/red_primary"
+                android:buttonTint="@color/red_primary" />
+        </RadioGroup>
+
+        <!-- ─── Last Donation Date ─────────────────────────────── -->
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Last Donation Date (if any)" android:textColor="@color/text_primary"
+            android:textStyle="bold" android:layout_marginBottom="6dp"/>
+        <!-- Tapping this opens a DatePickerDialog -->
+        <TextView
+            android:id="@+id/tvDonationDate"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:hint="Tap to pick a date"
+            android:gravity="center_vertical"
+            android:background="@drawable/bg_input_field"
+            android:padding="14dp"
+            android:textColor="@color/text_primary"
+            android:textColorHint="@color/text_hint"
+            android:layout_marginBottom="14dp" />
+
+        <!-- ─── Availability Toggle ───────────────────────────── -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="24dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Available to donate?"
+                android:textColor="@color/text_primary"
+                android:textStyle="bold" />
+
+            <!-- Switch = toggle button (on/off) -->
+            <Switch
+                android:id="@+id/switchAvailability"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:thumbTint="@color/red_primary"
+                android:trackTint="@color/red_light" />
+        </LinearLayout>
+
+        <!-- ─── Register Button ────────────────────────────────── -->
+        <Button
+            android:id="@+id/btnRegister"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:text="Create Account"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:background="@drawable/bg_button_red"
+            android:layout_marginBottom="16dp" />
+
+        <!-- ─── Login link ─────────────────────────────────────── -->
+        <TextView
+            android:id="@+id/tvLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Already have an account? Login"
+            android:textColor="@color/red_primary"
+            android:textSize="14sp"
+            android:padding="8dp" />
+
+    </LinearLayout>
+</ScrollView>
