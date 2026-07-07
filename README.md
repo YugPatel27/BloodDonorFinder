@@ -91,7 +91,9 @@ BloodDonorFinder/
 - Emergency request broadcasting
 
 ## License
-
 This project is intended for educational and learning purposes.
+
 <img width="343" height="729" alt="image" src="https://github.com/user-attachments/assets/6587b0e1-6393-474b-b0d1-5fc41ef1678a" />
+<img width="343" height="728" alt="Capture d&#39;écran 2026-07-07 113023" src="https://github.com/user-attachments/assets/e0b72481-8ab8-4c72-bdda-7ec152866841" />
+
 
