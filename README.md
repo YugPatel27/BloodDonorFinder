@@ -1,35 +1,95 @@
 # BloodDonor
 
-BloodDonor is an Android application that connects blood donors with people in need.
+BloodDonor is an Android application designed to bridge the gap between blood donors and recipients by making it easier to search for available donors during emergencies. The application provides a simple and intuitive interface for managing donor information, helping users quickly find compatible blood donors when every minute matters.
 
 ## Features
 
-- Search and view donor information
-- User-friendly Android interface
-- Built with Java and Android Studio
+- User registration and donor profile management
+- Search donors by blood group
+- View donor contact information
+- Simple and intuitive Android user interface
+- Fast donor lookup during emergencies
+- Local data management for donor records
+- Built using native Android development practices
+
+## Tech Stack
+
+- Java
+- Android Studio
+- Android SDK
+- Gradle
+
+## Prerequisites
+
+Before running the project, ensure you have:
+
+- Android Studio (latest stable version recommended)
+- Java Development Kit (JDK 8 or later)
+- Android SDK
+- Gradle (managed automatically through Android Studio)
 
 ## Getting Started
 
-1. Open the project in Android Studio.
-2. Sync the Gradle files.
-3. Run the app on an emulator or a physical Android device.
+### 1. Clone the repository
 
-## Notes
+```bash
+git clone https://github.com/YugPatel27/BloodDonorFinder.git
+cd BloodDonorFinder
+```
 
-- `local.properties` is ignored by Git.
-- Sensitive signing files are also ignored by Git.
+### 2. Open the project
+
+Open the project folder using Android Studio.
+
+### 3. Sync Gradle
+
+Allow Android Studio to download the required dependencies and complete Gradle synchronization.
+
+### 4. Run the application
+
+Launch the application on:
+
+- Android Emulator
+- Physical Android device with USB Debugging enabled
 
 ## Project Structure
 
 ```
-BloodDonor/
-├── app/
-├── gradle/
-├── build.gradle
-├── settings.gradle
+BloodDonorFinder/
+├── app/                 # Application source code
+├── gradle/              # Gradle wrapper files
+├── build.gradle         # Project build configuration
+├── settings.gradle      # Gradle settings
+├── gradle.properties    # Gradle properties
 └── README.md
 ```
 
+## Application Workflow
+
+1. Launch the application.
+2. Browse the list of available blood donors.
+3. Search donors by blood group.
+4. View donor details.
+5. Contact suitable donors during emergencies.
+
+## Notes
+
+- `local.properties` is excluded from version control.
+- Build artifacts are automatically ignored.
+- Sensitive signing keys and credentials should never be committed.
+- Configure your Android SDK location locally using `local.properties`.
+
+## Future Improvements
+
+- User authentication
+- Firebase integration
+- Real-time donor availability
+- Location-based donor search
+- Push notifications
+- Blood request posting
+- Hospital integration
+- Emergency request broadcasting
+
 ## License
 
-This project is for educational purposes.
+This project is intended for educational and learning purposes.
