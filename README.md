@@ -93,3 +93,5 @@ BloodDonorFinder/
 ## License
 
 This project is intended for educational and learning purposes.
+<img width="343" height="729" alt="image" src="https://github.com/user-attachments/assets/6587b0e1-6393-474b-b0d1-5fc41ef1678a" />
+
