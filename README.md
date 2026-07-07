@@ -96,6 +96,5 @@ This project is intended for educational and learning purposes.
 <img width="343" height="729" alt="image" src="https://github.com/user-attachments/assets/6587b0e1-6393-474b-b0d1-5fc41ef1678a" />
 <img width="343" height="728" alt="Capture d&#39;écran 2026-07-07 113023" src="https://github.com/user-attachments/assets/e0b72481-8ab8-4c72-bdda-7ec152866841" />
 <img width="350" height="727" alt="image" src="https://github.com/user-attachments/assets/366fb216-a53e-4614-b84e-9ab14b5e26ea" />
-<img width="346" height="723" alt="image" src="https://github.com/user-attachments/assets/bc465fc0-b06a-40b9-856b-2331f6a4a33d" />
 
 
