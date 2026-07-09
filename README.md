@@ -49,7 +49,7 @@ Allow Android Studio to download the required dependencies and complete Gradle s
 
 Launch the application on:
 
-- Android Emulator
+- Android Virtual Emulator
 - Physical Android device with USB Debugging enabled
 
 ## Project Structure
